@@ -59,7 +59,6 @@ const OMDbAPI = () => {
       if (movie.genre.includes(genre)||movie.year.includes(year)){
         return movie
       }
-      
     });
     setMovies(filteredMovies.slice(0, 10));
   }

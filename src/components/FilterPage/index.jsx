@@ -14,6 +14,7 @@ const filters = {
   ],
 
   genre: [
+    { value: 'Short', label: 'Short', checked: false },
     { value: 'Action', label: 'Action', checked: false },
     { value: 'Drama', label: 'Drama', checked: false },
     { value: 'Documentary', label: 'Documentary', checked: false },
@@ -58,7 +59,7 @@ export default function Filter({handleFilter}) {
                         onChange={handleChange}
                         id={`price-${optionIdx}`}
                         name="price[]"
-                        // defaultValue={option.value}
+                        defaultValue={option.value}
                         type="checkbox"
                         className="h-4 w-4 flex-shrink-0 rounded border-gray-300 text-white focus:ring-indigo-500"
                         defaultChecked={option.checked}
@@ -81,7 +82,7 @@ export default function Filter({handleFilter}) {
                         onChange={handleChange}
                         id={`category-${optionIdx}`}
                         name="category[]"
-                          // defaultValue={option.value}
+                        defaultValue={option.value}
                         type="checkbox"
                         className="h-4 w-4 flex-shrink-0 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                         defaultChecked={option.checked}
